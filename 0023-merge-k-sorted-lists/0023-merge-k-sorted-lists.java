@@ -9,41 +9,45 @@
  * }
  */
 class Solution {
-    public ListNode mergeTwo(ListNode list1, ListNode list2) {
-        
-        ListNode c = new ListNode(0);
-        ListNode temp = c;
-        while(list1!=null && list2!=null){
-            if(list1.val <= list2.val){
-                temp.next = list1;
-                list1 = list1.next;
-                temp = temp.next;
-            }else{
-                temp.next = list2;
-                list2 = list2.next;
-                temp = temp.next;
+
+    // Merge two sorted linked lists
+    public ListNode mergeTwo(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0), tail = dummy;
+
+        while (l1 != null && l2 != null) {
+            // Attach smaller node to merged list
+            if (l1.val <= l2.val) {
+                tail.next = l1;
+                l1 = l1.next;
+            } else {
+                tail.next = l2;
+                l2 = l2.next;
             }
+            tail = tail.next;
         }
 
-        if(list1==null) temp.next = list2;
-        else temp.next = list1;
-        return c.next;
+        // Attach the remaining nodes
+        tail.next = (l1 != null) ? l1 : l2;
+        return dummy.next;
     }
 
+    // Merge k sorted linked lists using pairwise merging
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
 
-        while(lists.length>1){
-            ArrayList<ListNode> arr = new ArrayList<>();
-            for(int i=0; i<lists.length; i+=2){
+        // Keep merging pairs until one list remains
+        while (lists.length > 1) {
+            List<ListNode> merged = new ArrayList<>();
+
+            // Merge lists in pairs
+            for (int i = 0; i < lists.length; i += 2) {
                 ListNode l1 = lists[i];
-                ListNode l2 = null;
-                if(i+1 < lists.length){
-                    l2 = lists[i+1];
-                }
-                arr.add(mergeTwo(l1,l2));
+                ListNode l2 = (i + 1 < lists.length) ? lists[i + 1] : null;
+                merged.add(mergeTwo(l1, l2));
             }
-             lists = arr.toArray(new ListNode[0]);
+
+            // Convert back to array for next iteration
+            lists = merged.toArray(new ListNode[0]);
         }
 
         return lists[0];
