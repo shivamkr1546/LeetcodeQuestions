@@ -22,8 +22,10 @@ class Solution {
         helper(root.right, arr);
     }
     public int countNodes(TreeNode root) {
-        List<Integer> arr = new ArrayList<>();
-        helper(root, arr);
-        return arr.size();
+        // List<Integer> arr = new ArrayList<>();
+        // helper(root, arr);
+        // return arr.size();
+        if(root == null) return 0;
+        return 1 + countNodes(root.left) + countNodes(root.right);
     }
 }
