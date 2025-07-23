@@ -1,24 +1,21 @@
 class Solution {
     public int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
+        stack.push(-1); // base index
         int maxLen = 0;
-        int lastInvalid = -1;  // to track the last unmatched ')'
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
             if (c == '(') {
-                stack.push(i);  // store index
+                stack.push(i); // push index of '('
             } else {
-                if (!stack.isEmpty()) {
-                    stack.pop();  // matched with previous '('
-                    if (!stack.isEmpty()) {
-                        maxLen = Math.max(maxLen, i - stack.peek());
-                    } else {
-                        maxLen = Math.max(maxLen, i - lastInvalid);
-                    }
+                stack.pop(); // try to match with '('
+
+                if (stack.isEmpty()) {
+                    stack.push(i); // unmatched ')', reset base
                 } else {
-                    lastInvalid = i;  // unmatched ')'
+                    maxLen = Math.max(maxLen, i - stack.peek()); // valid substring
                 }
             }
         }
