@@ -1,38 +1,43 @@
 class Solution {
-    public void dfs(int[][] grid, int i, int j, int min){
-        if(i<0 || i>=grid.length
-        || j<0 || j>=grid[0].length
-        || grid[i][j] == 0
-        || 1 < grid[i][j] && grid[i][j] < min){
-            return;
-        }
-
-        grid[i][j] = min;
-        dfs(grid, i, j+1, min+1);
-        dfs(grid, i, j-1, min+1);
-        dfs(grid, i+1, j, min+1);
-        dfs(grid, i-1, j, min+1);
-    }
     public int orangesRotting(int[][] grid) {
         int r = grid.length;
         int c = grid[0].length;
 
-        for(int i=0; i<r; i++){
-            for(int j=0; j<c; j++){
-                if(grid[i][j]==2){
-                    dfs(grid, i, j, 2);
+        Queue<int[]> queue = new LinkedList<>();
+        int fresh = 0;
+
+        for(int i = 0; i < r; i++) {
+            for(int j = 0; j < c; j++) {
+                if(grid[i][j] == 2) {
+                    queue.offer(new int[]{i, j});
+                } else if(grid[i][j] == 1) {
+                    fresh++;
                 }
             }
         }
-        int min = 2;
-        for(int[] row : grid) {
-            for(int cell : row) {
-                if(cell == 1) return -1;
-                min = Math.max(min, cell);
+        
+        if(fresh == 0) return 0;
+        int[][] directions = {{0,1}, {1,0}, {0,-1}, {-1,0}};
+        int min = -1;
+
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            min++;
+            for(int i=0; i<size; i++){
+                int[] pos = queue.poll();
+                for(int[] dir : directions){
+                    int x = pos[0] + dir[0];
+                    int y = pos[1] + dir[1];
+
+                    if(x >= 0 && y >= 0 && x < r && y < c && grid[x][y] == 1){
+                        grid[x][y] = 2;
+                        fresh--;
+                        queue.offer(new int[]{x, y});
+                    }
+                }
             }
         }
+        return fresh == 0 ? min : -1;
         
-        return min - 2;
-
     }
 }
