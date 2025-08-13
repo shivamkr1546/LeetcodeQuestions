@@ -8,21 +8,21 @@ class Solution {
             adj.get(edge[1]).add(edge[0]);
         }
 
-        return hasPath(adj, source, destination, new boolean[n]);
+        boolean[] vis = new boolean[n];
+
+        return hasPath(adj, vis, source, destination);
     }
 
-    public boolean hasPath(List<List<Integer>> adj, int src, int dest, boolean vis[]){
-        if(src==dest){
-            return true;
-        }
+    public boolean hasPath(List<List<Integer>> adj, boolean[] vis, int src, int dest){
+        if(src == dest) return true;
 
         vis[src] = true;
-        for(int neighbour : adj.get(src)){
-            if(!vis[neighbour] && hasPath(adj, neighbour, dest, vis)){
+
+        for(int neighbor : adj.get(src)){
+            if(!vis[neighbor] && hasPath(adj, vis, neighbor, dest)){
                 return true;
             }
         }
-
         return false;
     }
 }
