@@ -3,32 +3,30 @@ class Solution {
         int n = nums.length;
         int sum = 0;
 
-        for(int i=0; i<n; i++){
-            sum += nums[i];
+        for (int i : nums) {
+            sum += i;
         }
 
-        if(sum % 2 != 0){
-            return false;
-        }
-
+        if (sum % 2 != 0) return false;
         sum = sum / 2;
 
-        Boolean[][] dp = new Boolean[n+1][sum+1];
-        
-        return memo(nums, sum, n, dp);
+        Boolean[][] dp = new Boolean[n + 1][sum + 1];
+        return memo(nums, n, sum, dp);
     }
 
-    public boolean memo(int[] nums, int sum, int n, Boolean[][] dp){
-        if(n==0) return (sum==0);
+    public boolean memo(int[] nums, int n, int sum, Boolean[][] dp) {
+        if (sum == 0) return true;   // ✅ base case 1: sum achieved
+        if (n == 0) return false;    // ✅ base case 2: no numbers left
 
-        if(dp[n][sum] != null) return (boolean)dp[n][sum];
+        if (dp[n][sum] != null) return dp[n][sum];
 
-        if(nums[n-1] <= sum){
-            dp[n][sum] = memo(nums, sum - nums[n-1], n-1, dp) || memo(nums, sum, n-1, dp);
-        }else{
-            dp[n][sum] = memo(nums, sum, n-1, dp);
+        if (nums[n - 1] <= sum) {
+            // include OR exclude
+            return dp[n][sum] = memo(nums, n - 1, sum - nums[n - 1], dp) 
+                              || memo(nums, n - 1, sum, dp);
+        } else {
+            // only exclude
+            return dp[n][sum] = memo(nums, n - 1, sum, dp);
         }
-
-        return (boolean)dp[n][sum];
     }
 }
