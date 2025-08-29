@@ -5,9 +5,8 @@ class Solution {
         for (int ele : arr) {
             sum += ele;
         }
-        
-        if(Math.abs(d) > sum) return 0;
-        if((sum + d) % 2 != 0) return 0;
+
+        if((Math.abs(d) > sum) || (sum + d) % 2 != 0) return 0;
         
         int s1 = (sum+d)/2;
     
