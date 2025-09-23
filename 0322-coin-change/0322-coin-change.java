@@ -3,21 +3,18 @@ class Solution {
         int n = coins.length;
         int[][] dp = new int[n+1][amount+1];
 
-        for(int i=0; i<=n; i++) Arrays.fill(dp[i], -1);
-        int ans = memo(coins, amount, n, dp);
-        return (ans == Integer.MAX_VALUE - 1 ? -1 : ans);
-    }
+        for(int i=0; i<=n; i++) dp[i][0] = 0;
+        for(int j=1; j<=amount; j++) dp[0][j] = Integer.MAX_VALUE - 1;
 
-    int memo(int[] coins, int sum, int n, int[][] dp){
-        if(sum == 0) return 0;
-        if(n==0) return Integer.MAX_VALUE - 1;
-
-        if(dp[n][sum] != -1) return dp[n][sum];
-
-        if(coins[n-1] <= sum){
-            return dp[n][sum] = Math.min(memo(coins, sum, n-1, dp), 1 + memo(coins, sum-coins[n-1], n, dp));
-        }else{
-            return dp[n][sum] = memo(coins, sum, n-1, dp);
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=amount; j++){
+                if(coins[i-1] <= j){
+                    dp[i][j] = Math.min(dp[i-1][j] , 1 + dp[i][j - coins[i-1]]);
+                }else{
+                    dp[i][j] = dp[i-1][j];
+                }
+            }
         }
+        return dp[n][amount] == Integer.MAX_VALUE - 1 ? -1 : dp[n][amount];
     }
 }
