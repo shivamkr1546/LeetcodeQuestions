@@ -1,22 +1,19 @@
 class Solution {
-    public int subarraySum(int[] a, int k) {
-        Map<Long, Integer> presumMap = new HashMap<>();
-        long sum = 0;
-        int maxLen = 0;
+    public int subarraySum(int[] nums, int k) {
+        HashMap<Integer, Integer> subNum = new HashMap<>();
+        subNum.put(0, 1);
+        int total = 0, count = 0;
 
-        for(int i=0; i<a.length; i++){
-            sum += a[i];
+        for (int n : nums) {
+            total += n;
 
-            if(sum == k) maxLen = Math.max(maxLen, i+1);
-
-            long rem = sum - k;
-            if(presumMap.containsKey(rem)){
-                int len = i - presumMap.get(rem);
-                maxLen = Math.max(maxLen, len);
+            if (subNum.containsKey(total - k)) {
+                count += subNum.get(total - k);
             }
 
-            presumMap.putIfAbsent(sum, i);
+            subNum.put(total, subNum.getOrDefault(total, 0) + 1);
         }
-        return maxLen;        
+
+        return count;        
     }
 }
