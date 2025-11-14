@@ -1,31 +1,32 @@
 class Solution {
-    public int smallestDivisor(int[] nums, int threshold) {
-        int l = 1;
-        int h = Integer.MIN_VALUE;
+    public int smallestDivisor(int[] nums, int t) {
+        int lo = 1;
+        int hi = Integer.MIN_VALUE;
+
         for(int n : nums){
-            h = Math.max(h , n);
-        }        
-        return binarySearch(nums, threshold, l, h);
+            lo = Math.min(lo, n);
+            hi = Math.max(hi, n);
+        }
+
+        return binarySearch(nums, t, lo, hi);
     }
 
-    public int binarySearch(int[] nums, int t, int l, int h){
-        int ans = -1;
-        while(l<=h){
-            int d = l + (h - l)/2;
-            if(check(nums, d) <= t){
-                ans = d;
-                h = d - 1;
+    public int binarySearch(int[] nums, int t, int lo, int hi){
+        while(lo<=hi){
+            int divisor = lo + (hi - lo)/2;
+            if(checkThres(nums, divisor) <= t){
+                hi = divisor - 1;
             }else{
-                l = d + 1;
+                lo = divisor + 1;
             }
         }
-        return ans;
+        return lo;
     }
 
-    public int check(int[] nums, int d){
+    public int checkThres(int[] nums, int div){
         int sum = 0;
-        for(int i=0; i<nums.length; i++){
-            sum += Math.ceil(nums[i]/(double)d);
+        for(int n : nums){
+            sum += Math.ceil(n/(double)div);
         }
         return sum;
     }
