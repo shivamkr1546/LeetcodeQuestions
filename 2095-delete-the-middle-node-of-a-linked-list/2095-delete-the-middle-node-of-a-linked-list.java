@@ -9,8 +9,7 @@
  * }
  */
 class Solution {
-    public ListNode deleteMiddle(ListNode head) {
-        if(head == null || head.next == null) return null;
+    public ListNode findMid(ListNode head){
         ListNode slow = head;
         ListNode fast = head;
         ListNode prev = null;
@@ -19,8 +18,15 @@ class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
-        prev.next = prev.next.next;
 
+        return prev;
+    }
+
+    public ListNode deleteMiddle(ListNode head) {
+        if(head == null || head.next == null) return head.next;
+        ListNode prev = findMid(head);
+        if(prev.next == null) return head;
+        prev.next = prev.next.next;
         return head;
     }
 }
