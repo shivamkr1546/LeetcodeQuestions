@@ -15,18 +15,13 @@ public class Solution {
         ListNode ptr2 = headB;
 
         while(ptr1 != ptr2){
-            if(ptr1 == null){
-                ptr1 = headB;
-            }else{
-                ptr1 = ptr1.next;
-            }
+            if(ptr1 == null) ptr1 = headB;
+            else ptr1 = ptr1.next;
 
-            if(ptr2 == null){
-                ptr2 = headA;
-            }else{
-                ptr2 = ptr2.next;
-            }
+            if(ptr2 == null) ptr2 = headA;
+            else ptr2 = ptr2.next;
         }
-        return ptr1;
+
+        return ptr2;
     }
 }
