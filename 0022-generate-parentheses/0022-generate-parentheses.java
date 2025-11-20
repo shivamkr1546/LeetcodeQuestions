@@ -1,21 +1,23 @@
 class Solution {
-    public void backtrack(List<String> result, String str, int open, int close, int max){
-        if(str.length() == max*2){
-            result.add(str);
+    public List<String> generateParenthesis(int n) {
+        List<String> ans = new ArrayList<String>();
+
+        backtrack(ans, "", 0, 0, n);
+        return ans;
+    }
+
+    public void backtrack(List<String> ans, String str, int open, int close, int n){
+        if(str.length() == n*2){
+            ans.add(str);
             return;
         }
 
-        if(open < max){
-            backtrack(result, str+"(", open+1, close, max);
+        if(open < n){
+            backtrack(ans, str+"(", open+1, close, n);
         }
 
         if(close < open){
-            backtrack(result, str+")", open, close+1, max);
+            backtrack(ans, str+")", open, close+1, n);
         }
-    }
-    public List<String> generateParenthesis(int n) {
-        List<String> result = new ArrayList<String>();
-        backtrack(result, "", 0, 0, n);
-        return result;
     }
 }
