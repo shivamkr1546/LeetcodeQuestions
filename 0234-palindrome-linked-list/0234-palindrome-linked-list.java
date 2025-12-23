@@ -9,39 +9,23 @@
  * }
  */
 class Solution {
-    public ListNode getMid(ListNode head){
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while(fast != null && fast.next != null){
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        return slow;
-    }
     public boolean isPalindrome(ListNode head) {
-        ListNode midNode = getMid(head);
-
-        ListNode curr = midNode;
-        ListNode prev = null;
-
-        while(curr != null){
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+        List<Integer> arr = new ArrayList<>();
+        while(head != null){
+            arr.add(head.val);
+            head = head.next;
         }
 
-        ListNode left = head;
-        ListNode right = prev;
 
-        while(right != null){
-            if(left.val != right.val) return false;
-            left = left.next;
-            right = right.next;
+        int l = 0;
+        int r = arr.size() - 1;
+        while(l<=r){
+            if(arr.get(l)!=arr.get(r)){
+                return false;
+            }
+            l++;
+            r--;
         }
-
         return true;
     }
 }
