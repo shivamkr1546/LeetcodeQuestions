@@ -1,16 +1,19 @@
-public class Solution {
+class Solution {
     public boolean validPalindrome(String s) {
-        int l = 0, r = s.length() - 1;
+        int l = 0;
+        int r = s.length() - 1;
 
-        while (l < r) {
-            if (s.charAt(l) != s.charAt(r)) {
-                return isPalindrome(s, l + 1, r) ||
-                       isPalindrome(s, l, r - 1);
+        while(l<=r){
+            char left = s.charAt(l);
+            char right = s.charAt(r);
+
+            if(left != right){
+                return isPalindrome(s, l+1, r) || isPalindrome(s, l, r - 1);
+            }else{
+                l++;
+                r--;
             }
-            l++;
-            r--;
         }
-
         return true;
     }
 
