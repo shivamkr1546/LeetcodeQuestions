@@ -21,12 +21,14 @@ public class Solution {
             if(slow==fast){
                 ListNode temp = head;
                 while(temp!=slow){
-                    slow=slow.next;
-                    temp=temp.next;
+                    slow = slow.next;
+                    temp = temp.next;
                 }
+
                 return temp;
             }
         }
+
         return null;
     }
 }
