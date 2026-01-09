@@ -13,11 +13,23 @@ class Solution {
         return mergeSort(head);
     }
 
+    public ListNode mergeSort(ListNode head){
+        if(head==null || head.next==null) return head;
+
+        ListNode mid = getMid(head);
+        ListNode rHead = mid.next;
+        mid.next = null;
+
+        ListNode left = mergeSort(head);
+        ListNode right = mergeSort(rHead);
+        return merge(left, right);
+    }
+
     public ListNode merge(ListNode head1, ListNode head2){
-        ListNode dummy = new ListNode(-1);
+        ListNode dummy = new ListNode(0);
         ListNode temp = dummy;
 
-        while(head1 != null && head2 != null){
+        while(head1!=null && head2!=null){
             if(head1.val <= head2.val){
                 temp.next = head1;
                 head1 = head1.next;
@@ -28,26 +40,13 @@ class Solution {
             temp = temp.next;
         }
 
-        if(head1 != null) temp.next = head1;
-        if(head2 != null) temp.next = head2;
+        if(head1!=null) temp.next = head1;
+        if(head2!=null) temp.next = head2;
 
         return dummy.next;
     }
 
-    public ListNode mergeSort(ListNode head){
-        if(head==null || head.next==null) return head;
-
-        ListNode mid = findMid(head);
-        ListNode rHead = mid.next;
-        mid.next = null;
-
-        ListNode left = mergeSort(head);
-        ListNode right = mergeSort(rHead);
-
-        return merge(left, right);
-    }
-
-    public ListNode findMid(ListNode head){
+    public ListNode getMid(ListNode head){
         ListNode slow = head;
         ListNode fast = head.next;
         while(fast != null && fast.next != null){
