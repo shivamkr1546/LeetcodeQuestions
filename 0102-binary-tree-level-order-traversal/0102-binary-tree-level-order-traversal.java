@@ -15,13 +15,15 @@
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
-
         List<List<Integer>> res = new ArrayList<>();
+        traversal(root, res);
+        return res;
+    }
+
+    public void traversal(TreeNode root, List<List<Integer>> res){
         if(root==null){
-            return res;
+            return;
         }
-        
-        
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
 
@@ -32,12 +34,10 @@ class Solution {
                 TreeNode currNode = q.remove();
                 arr.add(currNode.val);
 
-                if (currNode.left != null) q.add(currNode.left);
-                if (currNode.right != null) q.add(currNode.right);
+                if(currNode.left!=null) q.add(currNode.left);
+                if(currNode.right!=null) q.add(currNode.right);
             }
             res.add(arr);
         }
-
-        return res;
     }
 }
