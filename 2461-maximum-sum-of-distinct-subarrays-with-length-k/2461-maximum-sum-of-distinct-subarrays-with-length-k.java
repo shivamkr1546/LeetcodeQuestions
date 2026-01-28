@@ -1,47 +1,32 @@
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
         int n = nums.length;
-        Map<Integer, Integer> mp = new HashMap<>();
 
-        long sum = 0;
         long max = 0;
-        int dup = 0;
+        long sum = 0;
 
-        // first window
-        for (int i = 0; i < k; i++) {
-            int x = nums[i];
-            int freq = mp.getOrDefault(x, 0);
-            if (freq == 1) dup++;        // only 1 → 2 matters
-            mp.put(x, freq + 1);
-            sum += x;
-        }
+        Set<Integer> st = new HashSet<>();
 
-        if (dup == 0) max = sum;
+        int i=0;
+        int j=0;
 
-        // slide window
-        for (int i = k; i < n; i++) {
-            int add = nums[i];
-            int remove = nums[i - k];
-
-            // add
-            int addFreq = mp.getOrDefault(add, 0);
-            if (addFreq == 1) dup++;
-            mp.put(add, addFreq + 1);
-            sum += add;
-
-            // remove
-            int remFreq = mp.get(remove);
-            if (remFreq == 2) dup--;    // only 2 → 1 matters
-            if (remFreq == 1) {
-                mp.remove(remove);
-            } else {
-                mp.put(remove, remFreq - 1);
+        while(j < n){
+            while(st.contains(nums[j])){
+                sum -= nums[i];
+                st.remove(nums[i]);
+                i++;
             }
-            sum -= remove;
 
-            if (dup == 0) {
+            sum += nums[j];
+            st.add(nums[j]);
+
+            if(j-i+1 == k){
                 max = Math.max(max, sum);
+                sum -= nums[i];
+                st.remove(nums[i]);
+                i++;
             }
+            j++;
         }
 
         return max;
