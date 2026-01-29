@@ -1,32 +1,32 @@
 class Solution {
-    public int minEatingSpeed(int[] p, int h) {
-        int lo = 1;
-        int hi = Integer.MIN_VALUE;
+    public int minEatingSpeed(int[] piles, int h) {
+        int min = 1;
+        int max = 0;
 
-        for(int n : p){
-            hi = Math.max(hi, n);
+        int ans = 0;
+
+        for(int i=0; i<piles.length; i++){
+            max = Math.max(max, piles[i]);
         }
 
-        return binarySearch(p, h, lo, hi);
-    }
-
-    public int binarySearch(int[] p, int h, int lo, int hi){
-        while(lo <= hi){
-            int speed = lo + (hi - lo)/2;
-            if(checkTime(p, speed) <= h){
-                hi = speed - 1;
+        while(min<=max){
+            int mid = min + (max - min)/2;
+            if(calcTime(mid, piles) <= h){
+                ans = mid;
+                max = mid - 1;
             }else{
-                lo = speed + 1;
+                min = mid + 1;
             }
         }
-        return lo;
+
+        return ans;
     }
 
-    public int checkTime(int[] p, int speed){
-        int timeTaken = 0;
-        for(int n : p){
-            timeTaken += Math.ceil(n/(double)speed);
+    public int calcTime(int s, int[] piles){
+        int h = 0;
+        for(int i=0; i<piles.length; i++){
+            h += Math.ceil(piles[i] / (double)s);
         }
-        return timeTaken;
+        return h;
     }
 }
