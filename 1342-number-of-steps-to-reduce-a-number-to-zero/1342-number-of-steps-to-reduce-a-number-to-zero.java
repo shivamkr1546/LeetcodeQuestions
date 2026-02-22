@@ -1,16 +1,12 @@
 class Solution {
     public int numberOfSteps(int num) {
-        int cnt = 0;
-        if(num == 0) return cnt;
-        while(num > 0){
-            if(num % 2 == 0){
-                num = num / 2;
-                cnt++;
-            }else{
-                num = num - 1;
-                cnt++;
-            }
-        }
-        return cnt;
+        return recur(num, 0);
+    }
+
+    public int recur(int n, int steps){
+        if(n==0) return steps;
+
+        if(n%2==0) return recur(n/2, steps+1);
+        return recur(n-1, steps+1);
     }
 }
