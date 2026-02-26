@@ -3,7 +3,7 @@ class Solution {
 
     public List<String> generateParenthesis(int n) {
         StringBuilder sb = new StringBuilder("");
-        solve(sb, n, 0, 0);   // track counts
+        solve(sb, n, 0);
         return res;
     }
 
@@ -12,26 +12,27 @@ class Solution {
         for(int i=0; i<str.length(); i++){
             if(str.charAt(i) == '(') cnt++;
             else cnt--;
+            if(cnt<0) return false;
         }
         return cnt == 0;
     }
 
-    public void solve(StringBuilder str, int n, int open, int close){
-        if(str.length() == 2*n){
-            res.add(str.toString());
+    public void solve(StringBuilder str, int n, int length){
+        if(length == 2*n){
+            if(isValid(str)){
+                res.add(str.toString());
+            }
             return;
         }
 
-        if(open < n){
-            str.append('(');
-            solve(str, n, open+1, close);
-            str.deleteCharAt(str.length() - 1);
-        }
+        str.append('(');
+        solve(str, n, length+1);
+        str.deleteCharAt(str.length() - 1);
 
-        if(close < open){
-            str.append(')');
-            solve(str, n, open, close+1);
-            str.deleteCharAt(str.length() - 1);
-        }
+
+
+        str.append(')');
+        solve(str, n, length+1);
+        str.deleteCharAt(str.length() - 1);    
     }
 }
