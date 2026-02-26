@@ -2,13 +2,12 @@ class Solution {
     public List<List<String>> res = new ArrayList<>();
 
     public List<List<String>> solveNQueens(int n) {
-        if (n == 0) return res;
-
+        
         List<String> board = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
+        for(int i=0; i<n; i++){
             StringBuilder row = new StringBuilder();
-            for (int j = 0; j < n; j++) {
+            for(int j=0; j<n; j++){
                 row.append('.');
             }
             board.add(row.toString());
@@ -18,48 +17,41 @@ class Solution {
         return res;
     }
 
-    private boolean isValid(List<String> board, int row, int col) {
-        // check column
-        for (int i = row - 1; i >= 0; i--) {
-            if (board.get(i).charAt(col) == 'Q') {
-                return false;
-            }
-        }
-
-        // left diagonal
-        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
-            if (board.get(i).charAt(j) == 'Q') {
-                return false;
-            }
-        }
-
-        // right diagonal
-        for (int i = row - 1, j = col + 1; i >= 0 && j < board.size(); i--, j++) {
-            if (board.get(i).charAt(j) == 'Q') {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    private void solve(List<String> board, int row) {
-        if (row == board.size()) {
+    public void solve(List<String> board, int row){
+        if(row == board.size()){
             res.add(new ArrayList<>(board));
             return;
         }
 
-        for (int col = 0; col < board.size(); col++) {
-            if (isValid(board, row, col)) {
+        for(int i=0; i<board.size(); i++){
+            if(isValid(board, row, i)){
                 StringBuilder newRow = new StringBuilder(board.get(row));
-                newRow.setCharAt(col, 'Q');
+                newRow.setCharAt(i, 'Q');
                 board.set(row, newRow.toString());
 
-                solve(board, row + 1);
+                solve(board, row+1);
 
-                newRow.setCharAt(col, '.');
+                newRow.setCharAt(i, '.');
                 board.set(row, newRow.toString());
             }
         }
+    }
+
+    public boolean isValid(List<String> board, int row, int col){
+        //check for up
+        for(int i=row-1; i>=0; i--){
+            if(board.get(i).charAt(col) == 'Q') return false;
+        }
+
+        //check for right up diag
+        for(int i=row-1, j=col-1; i>=0 && j>=0;  i--, j--){
+            if(board.get(i).charAt(j) == 'Q') return false;
+        }
+
+        for(int i=row-1, j=col+1; i>=0 && j<board.size();  i--, j++){
+            if(board.get(i).charAt(j) == 'Q') return false;
+        }
+
+        return true;
     }
 }
