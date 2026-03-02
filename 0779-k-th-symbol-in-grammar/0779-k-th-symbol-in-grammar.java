@@ -1,12 +1,12 @@
 class Solution {
-    public int kthGrammar(int N, int K) {
-        if (N == 1) return 0;
-        // mid = 2^(N-2). safe because we return for N==1 above
-        int mid = 1 << (N - 2);
-        if (K <= mid) {
-            return kthGrammar(N - 1, K);
-        } else {
-            return kthGrammar(N - 1, K - mid) ^ 1; // flip bit using XOR 1
+    public int kthGrammar(int n, int k) {
+        if(n==1 && k==1) return 0;
+
+        int mid = 1 << (n - 2);
+        if(k <= mid){
+            return kthGrammar(n - 1, k);
+        }else{
+            return 1 - kthGrammar(n - 1, k - mid);    
         }
     }
 }
