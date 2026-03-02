@@ -1,69 +1,58 @@
-public class Solution {
-    private List<List<String>> result = new ArrayList<>();
+class Solution {
+    public List<List<String>> res = new ArrayList<>();
 
     public List<List<String>> solveNQueens(int n) {
-        if (n == 0)
-            return result;
+        if(n==0) return res;
 
         List<String> board = new ArrayList<>();
-        // For, n = 3, board = {"...", "...", "..."} initially
-        for (int i = 0; i < n; i++) {
-            StringBuilder row = new StringBuilder();
-            for (int j = 0; j < n; j++) {
-                row.append('.');
+        for(int i=0; i<n; i++){
+            StringBuilder sb = new StringBuilder("");
+            for(int j=0; j<n; j++){
+                sb.append('.');
             }
-            board.add(row.toString());
+            board.add(sb.toString());
         }
 
-        int startRow = 0;
-        HashSet<Integer> cols = new HashSet<>();
-        HashSet<Integer> diags = new HashSet<>();
-        HashSet<Integer> antiDiags = new HashSet<>();
-        solve(board, startRow, cols, diags, antiDiags);
-
-        return result;
+        solve(board, 0);
+        return res;
     }
 
-    private void solve(List<String> board, int row, HashSet<Integer> cols, HashSet<Integer> diags, HashSet<Integer> antiDiags) {
-        if (row == board.size()) {
-            result.add(new ArrayList<>(board));
+    public void solve(List<String> board, int row){
+        if(row == board.size()){
+            res.add(new ArrayList<>(board));
             return;
         }
 
-        /*
-         * For a square (i, j) : Diagonally (i-j) is constant Anti diagonally (i+j) is
-         * constant
-         * 
-         * We can use this to find which square (i, j) has a risk of being attacked
-         * by another queen placed already in 'diagonal', or 'anti-diagonal' or
-         * 'column'
-         */
 
-        for (int col = 0; col < board.size(); col++) {
-            int diagId = row - col;
-            int antiDiagId = row + col;
+        for(int col=0; col<board.size(); col++){
+            if(isValid(board, row, col)){
+                StringBuilder newRow = new StringBuilder(board.get(row));
+                newRow.setCharAt(col, 'Q');
+                board.set(row, newRow.toString());
 
-            /*
-             * If the col, or diagonal or anti_diagonal are used means one of them has a
-             * Queen placed already which can attack, so look for other column
-             */
-            if (cols.contains(col) || diags.contains(diagId) || antiDiags.contains(antiDiagId))
-                continue;
+                solve(board, row+1);
 
-            cols.add(col);
-            diags.add(diagId);
-            antiDiags.add(antiDiagId);
-            StringBuilder newRow = new StringBuilder(board.get(row));
-            newRow.setCharAt(col, 'Q');
-            board.set(row, newRow.toString());
-
-            solve(board, row + 1, cols, diags, antiDiags);
-
-            cols.remove(col);
-            diags.remove(diagId);
-            antiDiags.remove(antiDiagId);
-            newRow.setCharAt(col, '.');
-            board.set(row, newRow.toString());
+                newRow.setCharAt(col, '.');
+                board.set(row, newRow.toString());
+            }
         }
+    }
+
+    public boolean isValid(List<String> board, int row, int col){
+        for(int i=row-1; i>=0; i--){
+            if(board.get(i).charAt(col) == 'Q') return false;
+        }
+
+
+        for(int i=row-1, j=col+1; i>=0 && j<board.size(); i--, j++){
+            if(board.get(i).charAt(j) == 'Q') return false;
+        }
+
+
+        for(int i=row-1, j=col-1; i>=0 && j>=0; i--, j--){
+            if(board.get(i).charAt(j) == 'Q') return false;
+        }
+
+        return true;
     }
 }
