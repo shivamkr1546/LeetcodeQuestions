@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
+| [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -15,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
+| [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -23,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
+| [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -39,4 +42,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0606-construct-string-from-binary-tree](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0606-construct-string-from-binary-tree/) | Medium |
+## Queue
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
+## Simulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 <!---LeetCode Topics End-->
