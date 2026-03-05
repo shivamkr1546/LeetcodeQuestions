@@ -1,43 +1,31 @@
 class Solution {
-    private static final Map<Integer, String> belowTen = Map.of(
-        0, "", 1, "One", 2, "Two", 3, "Three", 4, "Four", 5, "Five", 
-        6, "Six", 7, "Seven", 8, "Eight", 9, "Nine"
-    );
-
-    private static final Map<Integer, String> belowTwenty = Map.of(
-        10, "Ten", 11, "Eleven", 12, "Twelve", 13, "Thirteen", 14, "Fourteen", 
-        15, "Fifteen", 16, "Sixteen", 17, "Seventeen", 18, "Eighteen", 19, "Nineteen"
-    );
-
-    private static final Map<Integer, String> belowHundred = Map.of(
-        2, "Twenty", 3, "Thirty", 4, "Forty", 5, "Fifty", 
-        6, "Sixty", 7, "Seventy", 8, "Eighty", 9, "Ninety"
-    );
+    String[] tens = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+    String[] ones = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",
+                    "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
 
     public String numberToWords(int num) {
-        if(num == 0) return "Zero";
-        return solve(num);
+        if (num == 0)
+            return "Zero";
+        
+        return helper(num).trim();
     }
-
-    public String solve(int num){
-        if(num < 10) return belowTen.get(num);
-
-        if(num < 20) return belowTwenty.get(num);
-
-        if(num < 100)  return belowHundred.get(num / 10) + (num % 10 != 0 ? " " + belowTen.get(num % 10) : "");
-
-        if (num < 1000) { // 879 / 100 = 8 "Eight"
-            return solve(num / 100) + " Hundred" + (num % 100 != 0 ? " " + solve(num % 100) : "");
+    
+    private String helper(int num) {
+        StringBuilder sb=new StringBuilder();
+        if (num >= 1000000000) {
+            sb.append(helper(num / 1000000000)).append(" Billion ").append( helper(num % 1000000000));
+        } else if  (num >= 1000000) {
+            sb.append(helper(num / 1000000)).append(" Million ").append( helper(num % 1000000));
+        }else if (num >= 1000) {
+            sb.append(helper(num / 1000)).append(" Thousand ").append( helper(num % 1000));
+        }else if (num >= 100) {
+            sb.append(helper(num / 100)).append(" Hundred ").append( helper(num % 100));
+        }else if (num >= 20) {
+            sb.append(tens[num / 10]).append(" ").append( helper(num % 10));
+        } else {
+            sb.append(ones[num]);
         }
-
-        if (num < 1000000) {
-            return solve(num / 1000) + " Thousand" + (num % 1000 != 0 ? " " + solve(num % 1000) : "");
-        }
-
-        if (num < 1000000000) {
-            return solve(num / 1000000) + " Million" + (num % 1000000 != 0 ? " " + solve(num % 1000000) : "");
-        }
-
-        return solve(num / 1000000000) + " Billion" + (num % 1000000000 != 0 ? " " + solve(num % 1000000000) : "");
+        return sb.toString().trim();
+        
     }
 }
