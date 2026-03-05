@@ -44,6 +44,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0386-lexicographical-numbers](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0386-lexicographical-numbers/) | Medium |
 | [0606-construct-string-from-binary-tree](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0606-construct-string-from-binary-tree/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
@@ -69,4 +70,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
+## Trie
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0386-lexicographical-numbers](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0386-lexicographical-numbers/) | Medium |
 <!---LeetCode Topics End-->
