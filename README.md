@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0606-construct-string-from-binary-tree](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0606-construct-string-from-binary-tree/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
+| [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
