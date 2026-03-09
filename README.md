@@ -20,10 +20,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
+| [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
+| [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -31,6 +33,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
+| [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -60,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
+| [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
