@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
+| [1545-find-kth-bit-in-nth-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 | [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 | [3307-find-the-k-th-character-in-string-game-ii](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3307-find-the-k-th-character-in-string-game-ii/) | Hard |
@@ -43,6 +44,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0606-construct-string-from-binary-tree](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0606-construct-string-from-binary-tree/) | Medium |
+| [1545-find-kth-bit-in-nth-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
 ## Tree
@@ -65,6 +67,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1545-find-kth-bit-in-nth-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 | [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 ## Matrix
