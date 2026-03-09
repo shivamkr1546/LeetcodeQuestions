@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
+| [2698-find-the-punishment-number-of-an-integer](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/2698-find-the-punishment-number-of-an-integer/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -20,6 +21,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
+| [2698-find-the-punishment-number-of-an-integer](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/2698-find-the-punishment-number-of-an-integer/) | Medium |
 | [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 | [3307-find-the-k-th-character-in-string-game-ii](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3307-find-the-k-th-character-in-string-game-ii/) | Hard |
 ## Bit Manipulation
