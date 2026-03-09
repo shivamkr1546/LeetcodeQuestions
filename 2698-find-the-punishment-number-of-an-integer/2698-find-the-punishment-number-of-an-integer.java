@@ -1,41 +1,23 @@
 class Solution {
-    public int punishmentNumber(int n) {
-        int punish = 0;
-
-        for(int num = 1; num <= n; num++){
-            int sq = num * num;
-
-            String s = String.valueOf(sq);
-            if(check(s, num, 0, 0)){
-                punish += sq;
-            }
+    public boolean check(int num, int currnum, int target) {
+        if (num == 0) {
+            return currnum == target;
         }
-
-        return punish;
+        
+        return check(num / 10, currnum + num % 10, target) ||
+               check(num / 100, currnum + num % 100, target) ||
+               check(num / 1000, currnum + num % 1000, target) ||
+               check(num / 10000, currnum + num % 10000, target);
     }
 
-    public boolean check(String str, int num, int i, int currSum){
-        if(i == str.length()){
-            return currSum == num;
-        }
-
-        if(currSum > num){
-            return false;
-        }
-
-        boolean possible = false;
-
-        for(int j = i; j < str.length(); j++){
-            String sub = str.substring(i, j + 1);
-            int val = Integer.parseInt(sub);
-
-            possible = possible || check(str, num, j + 1, currSum + val);
-
-            if(possible){
-                return true;
+    public int punishmentNumber(int n) {
+        int punishmentNum = 0;
+        for (int currentNum = 1; currentNum <= n; currentNum++) {
+            int squareNum = currentNum * currentNum;
+            if (check(squareNum, 0, currentNum)) {
+                punishmentNum += squareNum;
             }
         }
-
-        return possible;
+        return punishmentNum;
     }
 }
