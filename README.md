@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0606-construct-string-from-binary-tree](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0606-construct-string-from-binary-tree/) | Medium |
+| [0761-special-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0761-special-binary-string/) | Hard |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
@@ -91,4 +92,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0386-lexicographical-numbers](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0386-lexicographical-numbers/) | Medium |
 | [0440-k-th-smallest-in-lexicographical-order](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0440-k-th-smallest-in-lexicographical-order/) | Hard |
+## Divide and Conquer
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0761-special-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0761-special-binary-string/) | Hard |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0761-special-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0761-special-binary-string/) | Hard |
 <!---LeetCode Topics End-->
