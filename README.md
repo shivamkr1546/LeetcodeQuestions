@@ -80,10 +80,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
+| [1900-the-earliest-and-latest-rounds-where-players-compete](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1900-the-earliest-and-latest-rounds-where-players-compete/) | Hard |
 ## Memoization
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
+| [1900-the-earliest-and-latest-rounds-where-players-compete](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1900-the-earliest-and-latest-rounds-where-players-compete/) | Hard |
 ## Trie
 | Problem Name | Difficulty |
 | ------- | ------- |
