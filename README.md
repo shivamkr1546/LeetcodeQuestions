@@ -28,6 +28,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0779-k-th-symbol-in-grammar](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0779-k-th-symbol-in-grammar/) | Medium |
+| [1009-complement-of-base-10-integer](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1009-complement-of-base-10-integer/) | Easy |
 | [3304-find-the-k-th-character-in-string-game-i](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3304-find-the-k-th-character-in-string-game-i/) | Easy |
 | [3307-find-the-k-th-character-in-string-game-ii](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/3307-find-the-k-th-character-in-string-game-ii/) | Hard |
 ## Recursion
