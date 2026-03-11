@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
+| [0064-minimum-path-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0064-minimum-path-sum/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 ## Backtracking
@@ -77,10 +78,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0064-minimum-path-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0064-minimum-path-sum/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0064-minimum-path-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0064-minimum-path-sum/) | Medium |
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
 | [1900-the-earliest-and-latest-rounds-where-players-compete](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1900-the-earliest-and-latest-rounds-where-players-compete/) | Hard |
 ## Memoization
