@@ -8,12 +8,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
 | [0064-minimum-path-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0064-minimum-path-sum/) | Medium |
+| [0494-target-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0494-target-sum/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
 ## Backtracking
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
+| [0494-target-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0494-target-sum/) | Medium |
 | [2698-find-the-punishment-number-of-an-integer](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/2698-find-the-punishment-number-of-an-integer/) | Medium |
 ## Math
 | Problem Name | Difficulty |
@@ -85,6 +87,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0064-minimum-path-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0064-minimum-path-sum/) | Medium |
 | [0241-different-ways-to-add-parentheses](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0241-different-ways-to-add-parentheses/) | Medium |
+| [0494-target-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0494-target-sum/) | Medium |
 | [1900-the-earliest-and-latest-rounds-where-players-compete](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1900-the-earliest-and-latest-rounds-where-players-compete/) | Hard |
 ## Memoization
 | Problem Name | Difficulty |
