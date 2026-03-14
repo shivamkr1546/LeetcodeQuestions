@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
 | [0494-target-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0494-target-sum/) | Medium |
+| [1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium |
 | [2698-find-the-punishment-number-of-an-integer](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/2698-find-the-punishment-number-of-an-integer/) | Medium |
 ## Math
 | Problem Name | Difficulty |
@@ -51,6 +52,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0273-integer-to-english-words](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0273-integer-to-english-words/) | Hard |
 | [0606-construct-string-from-binary-tree](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0606-construct-string-from-binary-tree/) | Medium |
 | [0761-special-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0761-special-binary-string/) | Hard |
+| [1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
