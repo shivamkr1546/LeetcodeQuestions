@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0051-n-queens](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0051-n-queens/) | Hard |
 | [0064-minimum-path-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0064-minimum-path-sum/) | Medium |
+| [0075-sort-colors](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0075-sort-colors/) | Medium |
 | [0494-target-sum](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0494-target-sum/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1823-find-the-winner-of-the-circular-game](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/1823-find-the-winner-of-the-circular-game/) | Medium |
@@ -108,5 +109,10 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0075-sort-colors](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0075-sort-colors/) | Medium |
 | [0761-special-binary-string](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0761-special-binary-string/) | Hard |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0075-sort-colors](https://github.com/shivamkr1546/LeetcodeQuestions/tree/main/0075-sort-colors/) | Medium |
 <!---LeetCode Topics End-->
